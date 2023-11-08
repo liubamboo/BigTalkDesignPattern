@@ -25,7 +25,7 @@ public:
     Number numberA;
     Number numberB;
 
-    virtual double GetResult()
+    virtual double getResult()
     {
         double result = 0;
         return result;
@@ -36,7 +36,7 @@ public:
 class OperationAdd : public Operation
 {
 public: 
-    double GetResult ()
+    double getResult () override
     {
         double result = 0;
         result = numberA.Get() + numberB.Get();
@@ -47,7 +47,7 @@ public:
 class OperationSub : public Operation
 {
 public:
-    double GetResult ()
+    double getResult () override
     {
         double result = 0;
         result = numberA.Get() - numberB.Get();
@@ -58,7 +58,7 @@ public:
 class OperationMul : public Operation
 {
 public:
-    double GetResult ()
+    double getResult () override
     {
         double result = 0;
         result = numberA.Get() * numberB.Get();
@@ -69,7 +69,7 @@ public:
 class OperationDiv : public Operation
 {
 public: 
-    double GetResult ()
+    double getResult () override
     {
         double result = 0;
         if (numberB.Get() == 0)
@@ -114,7 +114,7 @@ int main()
     Operation* operPtr = OperationFactory::createOperation ("+");
     operPtr->numberA.Set(1);
     operPtr->numberB.Set(2);
-    double result = operPtr->GetResult();
+    double result = operPtr->getResult();
     cout << "The result is " << result << endl;
     return 0;
 }
