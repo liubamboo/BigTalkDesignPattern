@@ -38,15 +38,15 @@ public:
     }
     void GiveDolls() override
     {
-        cout << _pMm->Get() << "送你洋娃娃" << endl;
+        cout << _pMm->Get() << ",送你洋娃娃" << endl;
     }
     void GiveFlowers() override
     {
-        cout << _pMm->Get() << "送你鲜花" << endl;
+        cout << _pMm->Get() << ",送你鲜花" << endl;
     }
     void GiveChocolate() override
     {
-        cout << _pMm->Get() << "送你巧克力" << endl;
+        cout << _pMm->Get() << ",送你巧克力" << endl;
     }
 };
 
