@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/*
+ * 非委托模式实现观测者模式
+ */
+
 class Subject;
 
 // 抽象观察者
