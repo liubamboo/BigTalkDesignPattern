@@ -18,7 +18,8 @@ public:
 template<class ObserverType, class ArgsType>
 class IDelegateAgent : public IDelegate<ArgsType>
 {
-    typedef void (ObserverType::*Handler)(ArgsType args);
+    //typedef void (ObserverType::*Handler)(ArgsType args);
+    using Handler = void (ObserverType::*)(ArgsType args);
 public:
     IDelegateAgent(ObserverType *type, Handler handler) : type(type), handler(handler) {}
 
