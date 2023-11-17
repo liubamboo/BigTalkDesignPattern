@@ -16,11 +16,11 @@ int main()
 
     // shared_ptr<IDelegateAgent<CStockObserver>> stockAgent(new IDelegateAgent<CStockObserver>(stock.get(), 
     //     &CStockObserver::CloseMarket));
-    shared_ptr<IDelegateAgent<CStockObserver>> stockAgent = make_shared<IDelegateAgent<CStockObserver>>(stock.get(), 
+    shared_ptr<IDelegateAgent<CStockObserver> > stockAgent = make_shared<IDelegateAgent<CStockObserver> >(stock.get(), 
         &CStockObserver::CloseMarket);
     // shared_ptr<IDelegateAgent<CNBAObserver>> nbaAgent(new IDelegateAgent<CNBAObserver>(nba.get(), 
     //     &CNBAObserver::CloseNBA));
-    shared_ptr<IDelegateAgent<CNBAObserver>> nbaAgent = make_shared<IDelegateAgent<CNBAObserver>>(nba.get(),
+    shared_ptr<IDelegateAgent<CNBAObserver> > nbaAgent = make_shared<IDelegateAgent<CNBAObserver> >(nba.get(),
         &CNBAObserver::CloseNBA);
 
     boss->Event += stockAgent.get();

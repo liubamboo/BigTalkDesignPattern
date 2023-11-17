@@ -18,8 +18,7 @@ public:
 template<class ObserverType>
 class IDelegateAgent : public IDelegate
 {
-    typedef void (*Handler)(void);
-
+    typedef void (ObserverType::*Handler)(void);
 public:
     IDelegateAgent(ObserverType *type, Handler handler)
     {
@@ -29,7 +28,7 @@ public:
 
     void Notify() override
     {
-        handler();
+        (type->*handler)();
     }
 private:
     Handler handler;
