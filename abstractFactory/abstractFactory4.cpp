@@ -196,10 +196,10 @@ public:
         return pResult;
     }
 public:
-    static const string db = "Sqlserver";
+    static string db;
 };
 
-// string DataAccess::db = "Sqlserver";
+string DataAccess::db = "Sqlserver";
 
 int main()
 {
